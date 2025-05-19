@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/assets/InnerCircleLogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#3a7bd5" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Transform your leadership and build a high performance team that functions from rest. Experience monthly executive trainings and Kingdom leadership."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/InnerCircleLogo.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,7 +24,18 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <!-- Default OG tags that will be dynamically replaced by SEO component -->
+    <meta property="og:title" content="Inner Circle | Build A High Performance Team" />
+    <meta property="og:description" content="Transform your leadership and build a high performance team that functions from rest." />
+    <meta property="og:image" content="%PUBLIC_URL%/assets/InnerCircleLogo.png" />
+    <meta property="og:url" content="https://innercircle.com" />
+    <meta property="og:type" content="website" />
+    <!-- Preconnect to important domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Load Inter font for consistent typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Inner Circle | Build A High Performance Team</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +50,25 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- Structured data for organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Inner Circle",
+        "url": "https://innercircle.com",
+        "logo": "https://innercircle.com/assets/InnerCircleLogo.png",
+        "description": "Transform your leadership and build a high performance team that functions from rest.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "help@brilliantperspectives.com",
+          "contactType": "customer service"
+        },
+        "sameAs": [
+          "https://www.facebook.com/innercircle",
+          "https://www.linkedin.com/company/inner-circle-leadership"
+        ]
+      }
+    </script>
   </body>
 </html>

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { HelmetProvider } from 'react-helmet-async';
+import { Analytics } from '@vercel/analytics/react';
 import GlobalStyle from './components/styles/GlobalStyle';
 import Home from './pages/Home';
 import Terms from './pages/Terms';
@@ -34,6 +35,7 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
           </Routes>
+          <Analytics />
         </ThemeProvider>
       </Router>
     </HelmetProvider>

@@ -191,19 +191,19 @@ const FeatureCarousel = () => {
   const features = [
     {
       title: "12 Kingdom Executive Trainings",
-      description: "One per month. [Add your copy here]"
+      description: "One per month. Transform your executive leadership with elite-level training that combines spiritual wisdom with practical business acumen. Each session equips you to lead with Kingdom advantage."
     },
     {
       title: "12 Kingdom Leadership Habits",
-      description: "[Add your copy here]"
+      description: "Develop powerful leadership routines that create lasting transformation. These proven habits will elevate your leadership effectiveness and create a culture of excellence within your organization."
     },
     {
       title: "LeaderForge Platform",
-      description: "Train your team with dashboards to track their progress. [Add your copy here]"
+      description: "Train your team with dashboards to track their progress. Our proprietary system ensures accountability, measures growth, and accelerates development at every level of your organization."
     },
     {
       title: "Join Other Kingdom Leaders",
-      description: "Share best practices and enjoy laser coaching. [Add your copy here]"
+      description: "Share best practices and enjoy laser coaching. Connect with like-minded executives who understand the unique challenges of leading with Kingdom values in today's business environment."
     }
   ];
 

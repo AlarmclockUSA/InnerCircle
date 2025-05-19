@@ -84,15 +84,17 @@ const WhyPartnerCarouselSlide = styled.div`
   width: 100%;
   min-height: 120px;
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: opacity 0.6s ease-in-out;
   position: absolute;
   left: 0;
   top: 0;
+  pointer-events: none;
 
   &.active {
     display: flex;
     opacity: 1;
     position: relative;
+    pointer-events: auto;
   }
 `;
 
@@ -209,23 +211,36 @@ const FeatureCarousel = () => {
 
   const showNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % features.length);
+    resetAutoAdvance();
   };
 
   const showPrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + features.length) % features.length);
+    resetAutoAdvance();
   };
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
+    resetAutoAdvance();
   };
 
   const startAutoAdvance = () => {
+    // Clear any existing interval before setting a new one
+    stopAutoAdvance();
     autoAdvanceInterval.current = setInterval(showNext, 8000);
   };
 
   const stopAutoAdvance = () => {
     if (autoAdvanceInterval.current) {
       clearInterval(autoAdvanceInterval.current);
+      autoAdvanceInterval.current = null;
+    }
+  };
+
+  const resetAutoAdvance = () => {
+    // Only restart auto-advance if the carousel is not being hovered
+    if (!isHovered) {
+      startAutoAdvance();
     }
   };
 
@@ -237,11 +252,20 @@ const FeatureCarousel = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Handle auto-advance based on hover state
+    if (isHovered) {
+      stopAutoAdvance();
+    } else {
+      startAutoAdvance();
+    }
+  }, [isHovered]);
+
   return (
     <WhyPartnerSection className="why-partner-section">
       <WhyPartnerInner className="why-partner-inner">
         <WhyPartnerEyebrow className="why-partner-eyebrow">Why Partner With Us</WhyPartnerEyebrow>
-        <WhyPartnerTitle className="why-partner-title">Create Impact, Build Income</WhyPartnerTitle>
+        <WhyPartnerTitle className="why-partner-title">Join the Inner Circle today.</WhyPartnerTitle>
         <WhyPartnerDesc className="why-partner-desc">
           Partner with Inner Circle to create both immediate and long-term value for your team. 
           Experience monthly executive trainings, leadership habits, a powerful platform, and a 

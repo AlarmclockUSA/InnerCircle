@@ -220,7 +220,7 @@ const FeatureCarousel = () => {
   };
 
   const startAutoAdvance = () => {
-    autoAdvanceInterval.current = setInterval(showNext, 5000);
+    autoAdvanceInterval.current = setInterval(showNext, 8000);
   };
 
   const stopAutoAdvance = () => {

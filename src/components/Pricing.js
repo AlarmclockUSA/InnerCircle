@@ -247,10 +247,10 @@ const Pricing = () => {
       <ValueSummary className="value-summary">
         <ValueSummaryInner className="value-summary-inner">
           <ValueSummaryTitle className="value-summary-title">
-            Total Value: <span><s>$29,985</s></span>
+            Total Value: <span><s>$39,985</s></span>
           </ValueSummaryTitle>
           <ValueSummarySubtitle className="value-summary-subtitle">
-            Today only - Benefit from Huge Savings
+            Today only - BSOL Student Discount
           </ValueSummarySubtitle>
         </ValueSummaryInner>
       </ValueSummary>
@@ -264,6 +264,9 @@ const Pricing = () => {
               <PricingBadge className="pricing-badge">BEST VALUE</PricingBadge>
               <PricingLabel className="pricing-label">Yearly</PricingLabel>
               <PricingPrice className="pricing-price">$15,000</PricingPrice>
+              <div style={{ color: '#e74c3c', fontWeight: '600', fontSize: '0.9rem', marginBottom: '8px' }}>
+                Special BSOL Student discount from $25,000
+              </div>
               <PricingDesc className="pricing-desc">
                 One-time annual payment. Best value for committed leaders. Get access to everything for a full year.
               </PricingDesc>
@@ -295,6 +298,9 @@ const Pricing = () => {
               <PricingPrice className="pricing-price">
                 $1,500 <PricingMult className="pricing-mult">x 12 months</PricingMult>
               </PricingPrice>
+              <div style={{ color: '#e74c3c', fontWeight: '600', fontSize: '0.9rem', marginBottom: '8px' }}>
+                Special BSOL Student discount from $2,500/mo
+              </div>
               <PricingDesc className="pricing-desc">
                 Flexible monthly payments. Spread your investment over time while getting full access.
               </PricingDesc>
